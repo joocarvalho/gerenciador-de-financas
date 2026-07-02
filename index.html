@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');</style>
 </head>
 <body>
-    <section>
+    <section class="container">
         <header>
             <h1>Controle Financeiro</h1>
         </header>
-        <div class="card">
-            <div>
+        <div class="cards-group">
+            <div class="card">
                 <div>
                     <h2>Entradas</h2>
                 </div>
                 <div>
                     <span id="saldo-entrada">R$0,00</span>
+                </div>
+                <div>
+                    <button type="button" id="btn-entrada">+Adicionar</button>
                 </div>
             </div>
             <div class="card">
@@ -25,6 +30,9 @@
                 </div>
                 <div>
                     <span id="saldo-saida">R$0,00</span>
+                </div>
+                <div>
+                    <button type="button" id="btn-saida">-Retirar</button>
                 </div>
             </div>
             <div class="card">
@@ -35,6 +43,28 @@
                     <span id="saldo-total">R$0,00</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="tela-entrada">
+        <div>
+            <h1>Entrada</h1>
+            <span>Valor</span>
+            <input type="number" placeholder="0,00" min="0" step="0.01">
+            <span>Detalhamento</span>
+            <input type="text" placeholder="Detalhamento da Entrada...">
+            <button type="button" id="btn-adicionar-entrada">Adicionar</button>
+        </div>
+    </section>
+
+    <section id="tela-saida">
+        <div>
+            <h1>Saída</h1>
+            <span>Valor</span>
+            <input type="number" placeholder="0,00" min="0" step="0.01">
+            <span>Detalhamento</span>
+            <input type="text" placeholder="Detalhamento da Entrada...">
+            <button type="button" id="btn-adicionar-saida">Adicionar Saída</button>
         </div>
     </section>
 </body>
