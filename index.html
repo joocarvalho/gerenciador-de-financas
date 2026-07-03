@@ -8,7 +8,7 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');</style>
 </head>
 <body>
-    <section class="container">
+    <section id="tela-inicial" class="container">
         <header>
             <h1>Controle Financeiro</h1>
         </header>
@@ -21,7 +21,10 @@
                     <span id="saldo-entrada">R$0,00</span>
                 </div>
                 <div>
-                    <button type="button" id="btn-entrada">+Adicionar</button>
+                    <span id="detalhamento-entrada">Nenhuma entrada registrada.</span>
+                </div>
+                <div>
+                    <button type="button" id="btn-entrada">+ Adicionar</button>
                 </div>
             </div>
             <div class="card">
@@ -32,7 +35,10 @@
                     <span id="saldo-saida">R$0,00</span>
                 </div>
                 <div>
-                    <button type="button" id="btn-saida">-Retirar</button>
+                    <span id="detalhamento-saida">Nenhuma saída registrada.</span>
+                </div>
+                <div>
+                    <button type="button" id="btn-saida">- Adicionar<br>Retirada</button>
                 </div>
             </div>
             <div class="card">
@@ -47,25 +53,27 @@
     </section>
 
     <section id="tela-entrada">
-        <div>
+        <div class="container-entrada">
             <h1>Entrada</h1>
             <span>Valor</span>
-            <input type="number" placeholder="0,00" min="0" step="0.01">
+            <input type="number" placeholder="0,00" min="0" step="0.01" id="valor-entrada">
             <span>Detalhamento</span>
-            <input type="text" placeholder="Detalhamento da Entrada...">
+            <input type="text" placeholder="Detalhamento da Entrada..." id="campo-detalhamento-entrada">
             <button type="button" id="btn-adicionar-entrada">Adicionar</button>
         </div>
     </section>
 
     <section id="tela-saida">
-        <div>
+        <div class="container-saida">
             <h1>Saída</h1>
             <span>Valor</span>
-            <input type="number" placeholder="0,00" min="0" step="0.01">
+            <input type="number" placeholder="0,00" min="0" step="0.01" id="valor-saida">
             <span>Detalhamento</span>
-            <input type="text" placeholder="Detalhamento da Entrada...">
+            <input type="text" placeholder="Detalhamento da Entrada..." id="campo-detalhamento-saida">
             <button type="button" id="btn-adicionar-saida">Adicionar Saída</button>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
